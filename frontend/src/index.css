@@ -27,6 +27,10 @@
     .text__para{
         @apply text-[18px] leading-[30px] font-[400] 
     }
+
+    .header{
+        @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px];
+    }
 }
 
 @media only screen and (max-width: 1024px){
@@ -47,5 +51,7 @@
     .text__para{
         @apply text-[16px] leading-7 mt-3;
     }
+
+    
 
 }
