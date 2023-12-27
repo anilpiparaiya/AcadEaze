@@ -5,11 +5,10 @@ import heroImg03 from "../assets/images/hero-img03.jpg";
 import icon01 from "../assets/images/icon01.jpg";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import {Link} from "react-router-dom";
-import {BsArrowRight} from "react-icons/bs";
-
+import { Link } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
-
+import ServiceList from "../components/Services/ServiceList";
 
 const Home = () => {
   return (
@@ -93,7 +92,6 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
-            
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
                 <img src={icon01} alt="" />
@@ -115,10 +113,7 @@ const Home = () => {
                   border-[#181A1E] mt-[30px] mx-auto flex items-center 
                   justify-center group-hover:bg-primaryColor hover:border-none"
                 >
-
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
-
-
                 </Link>
               </div>
             </div>
@@ -144,10 +139,7 @@ const Home = () => {
                   border-[#181A1E] mt-[30px] mx-auto flex items-center 
                   justify-center group-hover:bg-primaryColor hover:border-none"
                 >
-
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
-
-
                 </Link>
               </div>
             </div>
@@ -173,10 +165,7 @@ const Home = () => {
                   border-[#181A1E] mt-[30px] mx-auto flex items-center 
                   justify-center group-hover:bg-primaryColor hover:border-none"
                 >
-
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
-
-
                 </Link>
               </div>
             </div>
@@ -184,12 +173,29 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* About section start */}
 
       <About />
 
       {/* About section end */}
+
+      {/* services section start */}
+
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our Educational Services</h2>
+            <p className="text__para text-center">
+              World-Class Educational support for everyone. Our mentor system
+              offers unmatched, expert health care.
+            </p>
+          </div>
+
+          <ServiceList />
+        </div>
+      </section>
+
+      {/* services section start */}
     </>
   );
 };
