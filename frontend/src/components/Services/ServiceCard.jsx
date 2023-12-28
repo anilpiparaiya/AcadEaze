@@ -15,7 +15,7 @@ const ServiceCard = ({ item, index }) => {
       <div className="flex items-center justify-between mt-[30px]">
         <Link
           to="/mentors"
-          className="w-[44px] rounded-full border border-solid 
+          className="w-[44px] h-[44px] rounded-full border border-solid 
                   border-[#181A1E] mt-[30px] mx-auto flex items-center 
                   justify-center group-hover:bg-primaryColor hover:border-none"
         >
