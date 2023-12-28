@@ -5,13 +5,15 @@ import heroImg03 from "../assets/images/hero-img03.jpg";
 import icon01 from "../assets/images/icon01.jpg";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import featureImg from "../assets/images/feature-img.png";
+import featureImg from "../assets/images/feature-img.jpg";
+import faqImg from "../assets/images/faq-img.jpg"
 import videoIcon from "../assets/images/video-icon.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
+import FaqList from "../components/Faq/FaqList";
 
 const Home = () => {
   return (
@@ -294,6 +296,24 @@ const Home = () => {
       </section>
 
       {/* feature section end */}
+
+      {/* faq section start*/}
+
+      <section>
+        <div className="flex justify-between gap-[50px] lg:gap-0">
+          <div className="w-1/2 hidden md:block">
+            <img src={faqImg} alt="" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h2 className="heading">Most asked questions by our beloved mentees</h2>
+
+            <FaqList />
+
+          </div>
+        </div>
+      </section>
+
+      {/* faq section end */}
     </>
   );
 };
