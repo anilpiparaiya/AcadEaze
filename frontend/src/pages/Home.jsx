@@ -316,6 +316,23 @@ const Home = () => {
       </section>
 
       {/* faq section end */}
+
+      {/* testimonial */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">What our student say</h2>
+            <p className="text__para text-center">
+              World-Class Educational support for everyone. Our mentor system
+              offers unmatched, expert educare.
+            </p>
+          </div>
+
+          <ServiceList />
+        </div>
+      </section>
+
+      {/* testimonial end */}
     </>
   );
 };
