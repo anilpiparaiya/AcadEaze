@@ -305,10 +305,12 @@ const Home = () => {
             <img src={faqImg} alt="" />
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="heading">Most asked questions by our beloved mentees</h2>
+            <h2 className="heading">Frequently asked questions</h2>
+            
 
             <FaqList />
-
+            <h4>Can't find the answer you are looking for?</h4>
+           
           </div>
         </div>
       </section>

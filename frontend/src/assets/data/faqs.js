@@ -7,23 +7,27 @@ export const faqs = [
   {
     question: "What happens if I need to go a College?",
     content:
-    "One Mentor was founded on a better model of care one designed around mentees needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
-    
+      "One Mentor was founded on a better model of care one designed around mentees needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
   },
   {
-    question: "What happens if I need to go a hospital?",
+    question: "What are the transaction charges?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "Payment gateways like Stripe and PayPal typically charge around 3% of the transaction amount. This is beyond our control.",
   },
   {
-    question: "Can I visit your academic center?",
+    question: "How much can I charge for my sessions?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "It really depends on how much value you think you're providing and how much are your followers willing to pay. For idea, our creators charge anywhere from $50 to $500 for a session",
   },
   {
     question: "Does you provide urgent mentorship?",
     content:
-    "One Mentor was founded on a better model of care one designed around mentees needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+  },
 
+  {
+    question: "Wait, is AcadEaze really free?",
+    content:
+      "Yes! We're free to use and charge a very tiny commission on your earnings (5%). So that we grow only when you grow",
   },
 ];
