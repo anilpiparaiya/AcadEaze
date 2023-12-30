@@ -30,10 +30,7 @@ const navLinks = [
     display: 'Classes'
   },
 
-  {
-    path: '/pages',
-    display: 'Pages'
-  },
+  
 
   {
     path: '/blog',
