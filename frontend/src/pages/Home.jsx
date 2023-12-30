@@ -16,6 +16,8 @@ import ServiceList from "../components/Services/ServiceList";
 import FaqList from "../components/Faq/FaqList";
 import MentorList from "../components/Mentors/MentorList";
 
+// import Testimonial from "../components/Testimonial/Testimonial";
+
 const Home = () => {
   return (
     <>
@@ -332,6 +334,8 @@ const Home = () => {
       {/* faq section end */}
 
       {/* testimonial */}
+
+
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -342,7 +346,7 @@ const Home = () => {
             </p>
           </div>
 
-          <ServiceList />
+        {/* <Testimonial /> */}
         </div>
       </section>
 
