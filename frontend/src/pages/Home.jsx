@@ -6,7 +6,7 @@ import icon01 from "../assets/images/icon01.jpg";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
 import featureImg from "../assets/images/feature-img.jpg";
-import faqImg from "../assets/images/faq-img.jpg"
+import faqImg from "../assets/images/faq-img.jpg";
 import videoIcon from "../assets/images/video-icon.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
 import { Link } from "react-router-dom";
@@ -14,6 +14,7 @@ import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 import FaqList from "../components/Faq/FaqList";
+import MentorList from "../components/Mentors/MentorList";
 
 const Home = () => {
   return (
@@ -34,10 +35,7 @@ const Home = () => {
                   Welcome to our Mentors Appointment website, where guidance
                   meets convenience. Our platform is designed to connect you
                   with experienced and dedicated mentors who can provide
-                  valuable insights and support across various fields. Whether
-                  you're navigating a career change, seeking advice on personal
-                  development, or aiming to enhance specific skills, our mentors
-                  are here to help you chart your course to success. With
+                  valuable insights and support across various fields. With
                   user-friendly features, you can easily browse through a
                   diverse pool of mentors, view their profiles, and schedule
                   appointments at your convenience. We believe in the power of
@@ -209,7 +207,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* services section start */}
+      {/* services section end */}
 
       {/* feature section start */}
       <section className="container">
@@ -297,6 +295,24 @@ const Home = () => {
 
       {/* feature section end */}
 
+      {/* our great mentors */}
+
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our great Mentors</h2>
+            <p className="text__para text-center">
+              World-Class Educational support for everyone. Our mentor system
+              offers unmatched, expert educare.
+            </p>
+          </div>
+
+          <MentorList />
+        </div>
+      </section>
+
+      {/* our great mentors */}
+
       {/* faq section start*/}
 
       <section>
@@ -306,11 +322,9 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2">
             <h2 className="heading">Frequently asked questions</h2>
-            
 
             <FaqList />
             <h4>Can't find the answer you are looking for?</h4>
-           
           </div>
         </div>
       </section>
