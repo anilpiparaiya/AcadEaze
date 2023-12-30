@@ -11,7 +11,7 @@ const navLinks = [
   },
 
   {
-    path: '/metors',
+    path: '/mentors',
     display: 'Find a Mentor'
   },
 
