@@ -4,11 +4,7 @@ export const faqs = [
     content:
       "One Mentor was founded on a better model of care one designed around mentees needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
   },
-  {
-    question: "What happens if I need to go a College?",
-    content:
-      "One Mentor was founded on a better model of care one designed around mentees needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
-  },
+  
   {
     question: "What are the transaction charges?",
     content:
