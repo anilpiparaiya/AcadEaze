@@ -15,11 +15,7 @@ export const faqs = [
     content:
       "It really depends on how much value you think you're providing and how much are your followers willing to pay. For idea, our creators charge anywhere from $50 to $500 for a session",
   },
-  {
-    question: "Does you provide urgent mentorship?",
-    content:
-      "level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
-  },
+  
 
   {
     question: "Wait, is AcadEaze really free?",
