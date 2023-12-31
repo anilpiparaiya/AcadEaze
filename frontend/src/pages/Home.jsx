@@ -40,10 +40,7 @@ const Home = () => {
                   valuable insights and support across various fields. With
                   user-friendly features, you can easily browse through a
                   diverse pool of mentors, view their profiles, and schedule
-                  appointments at your convenience. We believe in the power of
-                  mentorship to inspire, guide, and propel individuals towards
-                  their goals. Join us on this transformative journey and take
-                  the next step towards unlocking your full potential.
+                  appointments at your convenience.
                 </p>
 
                 <button className="btn">Request an Appointment</button>

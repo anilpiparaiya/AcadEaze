@@ -25,13 +25,7 @@ const navLinks = [
     display: 'Contact'
   },
 
-  {
-    path: '/classes',
-    display: 'Classes'
-  },
-
   
-
   {
     path: '/blog',
     display: 'Blog'

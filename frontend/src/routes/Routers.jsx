@@ -1,7 +1,7 @@
 import Home from "../pages/Home"
 import About from "../pages/About"
 
-import Classes from "../pages/Classes"
+
 import Pages from "../pages/Pages"
 import Blog from "../pages/Blog"
 import Services from "../pages/Services"
@@ -12,14 +12,14 @@ import Mentors from "../pages/Mentors/Mentors"
 import MentorDetails from "../pages/Mentors/MentorDetails"
 
 import {Routes, Route} from "react-router-dom"
-import Team from "../pages/Team"
+
 
 const Routers = () => {
   return <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/classes" element={<Classes />} />
+      
       <Route path="/pages" element={<Pages />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/mentors" element={<Mentors />} />
