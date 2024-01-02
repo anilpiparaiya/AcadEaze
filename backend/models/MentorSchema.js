@@ -11,7 +11,7 @@ const DoctorSchema = new mongoose.Schema({
     type: String,
   },
 
-  // Fields for doctors only
+  // Fields for mentors only
   specialization: { type: String },
   qualifications: {
     type: Array,
@@ -41,4 +41,4 @@ const DoctorSchema = new mongoose.Schema({
   appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
 });
 
-export default mongoose.model("Doctor", DoctorSchema);
+export default mongoose.model("Mentor", MentorSchema);
