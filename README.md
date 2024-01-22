@@ -32,7 +32,7 @@ To get started with Blog App, follow these simple steps:
 
 2. Navigate to the project folder:
    ```bash
-   cd BlogEase
+   cd AcadEase
    ```
 
 3. `npm run dev`
@@ -93,7 +93,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Thank you for using BlogEase app, your go-to website for everyday lifestyle needs. If you have any questions or feedback, please feel free to reach out to us at [anilkumarpiparaiya@gmail.com](mailto:anilkumarpiparaiya@gmail.com). Enjoy your journey to a better and more informed lifestyle!
-
 
 
 
