@@ -26,7 +26,7 @@ export const register = async (req, res) => {
       user = new User({
         name,
         email,
-        password: hashPassword,
+        password: salt,
         photo,
         gender,
         role,
@@ -37,7 +37,7 @@ export const register = async (req, res) => {
         user = new Mentor({
           name,
           email,
-          password: hashPassword,
+          password: salt,
           photo,
           gender,
           role,
@@ -52,6 +52,33 @@ export const register = async (req, res) => {
 };
 
 export const login = async (req, res) => {
+  const {email,password}= req.body
   try {
-  } catch (error) {}
+    if (!email ||!password) {
+      return res.status(400).json({success:false,message:'email or password required'})
+
+    }
+
+    const user = await User.findOne(email)
+    if (!user) {
+      res.status(400).json({success:false, message:'user not found'})
+    }
+    const ispasswordValid = await user.ispasswordCorrect(password);
+    if (!ispasswordValid) {
+      return res.status(400).json({success: false, message : "password is invalid"})
+    }
+
+    const loggedInUser = await User.findById(user._id).select(
+      "-password"
+    );
+    const options = {
+      httpOnly: true,
+      secure: true,
+    };
+
+    return res.status(200).json({success:true, message:user})
+
+  } catch (error) {
+    return res.status(400).json({success:false, message:error})
+  }
 };
