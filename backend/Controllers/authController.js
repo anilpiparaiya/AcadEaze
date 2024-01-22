@@ -3,13 +3,20 @@ import Mentor from "../models/MentorSchema.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
+
+const generateToken = user=>{
+  return jwt.sign({id: user._id, role:user.role}, process.env.JWT_SECRET_KEY, {
+    expiresIn: '15d',
+  })
+}
+
 export const register = async (req, res) => {
   const { email, password, name, role, photo, gender } = req.body;
   try {
     let user = null;
 
     if (role === "mentee") {
-      user = User.findOne({ email });
+      user = await User.findOne({ email });
     } else if (role === "mentor") {
       user = Mentor.findOne({ email });
     }
@@ -20,13 +27,16 @@ export const register = async (req, res) => {
     }
 
     // hash password
-    const salt = await bcrypt.hash(password, salt);
+    // const salt = await bcrypt.hash(password, salt);
+    const salt = await bcrypt.genSalt(10);
+    const hashPassword = await bcrypt.hash(password, salt)
 
     if (role === "mentee") {
       user = new User({
         name,
         email,
-        password: salt,
+        // password: salt,
+        password: hashPassword,
         photo,
         gender,
         role,
@@ -37,7 +47,8 @@ export const register = async (req, res) => {
         user = new Mentor({
           name,
           email,
-          password: salt,
+          // password: salt,
+          password: hashPassword,
           photo,
           gender,
           role,
@@ -54,31 +65,69 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   const {email,password}= req.body
   try {
-    if (!email ||!password) {
-      return res.status(400).json({success:false,message:'email or password required'})
 
+    let user = null
+
+    const mentee = await User.findOne({email})
+    const mentor = await Mentor.findOne({email})
+
+    if(mentee){
+      user = mentee
     }
 
-    const user = await User.findOne(email)
-    if (!user) {
-      res.status(400).json({success:false, message:'user not found'})
-    }
-    const ispasswordValid = await user.ispasswordCorrect(password);
-    if (!ispasswordValid) {
-      return res.status(400).json({success: false, message : "password is invalid"})
+    if(menor){
+      user = mentor
     }
 
-    const loggedInUser = await User.findById(user._id).select(
-      "-password"
-    );
-    const options = {
-      httpOnly: true,
-      secure: true,
-    };
+    // check if user exist or not
+    if(!user){
+      return res.status(404).json({message: "User not found"})
+    }
 
-    return res.status(200).json({success:true, message:user})
+    // compare password
+    const ispasswordMatch = await bcrypt.compare(req.body.password, user.password)
+
+
+    if(!ispasswordMatch){
+      return res.status(400).json({status: false, message: "Invalid credentials"})
+    }
+
+
+    // get token
+    const token = generateToken(user)
+
+
+    const {password, role, appointments, ...rest} = user._doc
+
+    res.status(200).json({status: true, message: "Successfully login", token, data: {...rest}, role })
+
+    
+
+    // if (!email ||!password) {
+    //   return res.status(400).json({success:false,message:'email or password required'})
+
+    // }
+
+    // const user = await User.findOne(email)
+    // if (!user) {
+    //   res.status(400).json({success:false, message:'user not found'})
+    // }
+    // const ispasswordValid = await user.ispasswordCorrect(password);
+    // if (!ispasswordValid) {
+    //   return res.status(400).json({success: false, message : "password is invalid"})
+    // }
+
+    // const loggedInUser = await User.findById(user._id).select(
+    //   "-password"
+    // );
+    // const options = {
+    //   httpOnly: true,
+    //   secure: true,
+    // };
+
+    // return res.status(200).json({success:true, message:user})
 
   } catch (error) {
-    return res.status(400).json({success:false, message:error})
+    return res.status(500).json({success:false, message:"Failed to login"})
   }
 };
