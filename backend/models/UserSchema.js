@@ -16,4 +16,8 @@ const UserSchema = new mongoose.Schema({
   appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
 });
 
+UserSchema.methods.ispasswordCorrect = async function(password) {
+  return await bcrypt.compare(password, this.password);
+};
+
 export default mongoose.model("User", UserSchema);
