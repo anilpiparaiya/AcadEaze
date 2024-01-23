@@ -32,7 +32,7 @@ To get started with Blog App, follow these simple steps:
 
 2. Navigate to the project folder:
    ```bash
-   cd AcadEase
+   cd AcadEaze
    ```
 
 3. `npm run dev`
