@@ -26,7 +26,6 @@ export const deleteMentor = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Successfully deleted",
-      data: deleteMentor,
     });
   } catch (err) {
     res.status(500).json({ success: false, message: "Failed to delete" });
@@ -37,7 +36,9 @@ export const getSingleMentor = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const mentor = await Mentor.findById(id).select("-password");
+    const mentor = await Mentor.findById(id)
+      .populate("reviews")
+      .select("-password");
     res.status(200).json({
       success: true,
       message: "Mentor found",
