@@ -32,18 +32,18 @@ const Mentors = () => {
         </div>
       </section>
 
+      
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">What our student say</h2>
-            <p>
-              World-class care for everyone. Our mentor system offers unmatched,
-              expert mentor support
+            <p className="text__para text-center">
+              World-Class Educational support for everyone. Our mentor system
+              offers unmatched, expert educare.
             </p>
           </div>
-        </div>
-
         <Testimonial />
+        </div>
       </section>
     </>
   );

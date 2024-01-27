@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import {AiFillStar} from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 
 const FeedbackForm = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [reviewText, setReviewText] = useState('')
-  const handleSubmitReview = async e =>{
-    e.preventDefault()
-  }
+  const [reviewText, setReviewText] = useState("");
+  const handleSubmitReview = async (e) => {
+    e.preventDefault();
+    // Later we will use our api
+  };
   return (
     <form action="">
       <div>
-        <h3 className="text-headingColor text-[16px] leading-6 font-semibold mb-4 mt-0">
+        <h3
+          className="text-headingColor text-[16px] leading-6 
+        font-semibold mb-4 mt-0"
+        >
           How would you rate the overall experience?*
         </h3>
 
@@ -41,7 +45,7 @@ const FeedbackForm = () => {
                 </span>
               </button>
             );
-            })}
+          })}
         </div>
       </div>
 
@@ -53,11 +57,13 @@ const FeedbackForm = () => {
           rows="5"
           className="border border-solid border-[#0066ff34] focus:outline outline-primaryColor w-full px-4 py-3 rounded-md"
           placeholder="Write your message"
-          onChange={()=>setReviewText(e.target.value)}
+          onChange={() => setReviewText(e.target.value)}
         ></textarea>
       </div>
 
-      <button type="submit" onClick={handleSubmitReview} className="btn">Submit Feedback</button>
+      <button type="submit" onClick={handleSubmitReview} className="btn">
+        Submit Feedback
+      </button>
     </form>
   );
 };

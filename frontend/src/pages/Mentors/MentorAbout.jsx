@@ -9,7 +9,9 @@ const MentorAbout = () => {
         font-semibold flex items-center gap-2"
         >
           About of
-          <span>Anil Piparaiya</span>
+          <span className="text-irisBlueColor font-bold text-[24px] leading-9">
+            Anil Piparaiya
+          </span>
         </h3>
 
         <p className="text__para">
@@ -62,37 +64,37 @@ const MentorAbout = () => {
 
       <div className="mt-12">
         <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold">
-            Experience
+          Experience
         </h3>
 
         <ul className="grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">
-            <li className="p-4 rounded bg-[#ff9ea]">
-                <span className="text-yellowColor text-[15px] leading-6 font-semibold">
-                {formateDate("12-04-2019")} - {formateDate("08-13-2023")}
-                </span>
+          <li className="p-4 rounded bg-[#ff9ea]">
+            <span className="text-yellowColor text-[15px] leading-6 font-semibold">
+              {formateDate("12-04-2019")} - {formateDate("08-13-2023")}
+            </span>
 
-                <p className="text-[16px] leading-6 font-medium text-textColor">
-                    Sr. Member of Technical Staff
-                </p>
+            <p className="text-[16px] leading-6 font-medium text-textColor">
+              Sr. Member of Technical Staff
+            </p>
 
-                <p className="text-[14px] leading-5 font-medium text-textColor">
-                    Bangalore Karnatakta India
-                </p>
-            </li>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Bangalore Karnatakta India
+            </p>
+          </li>
 
-            <li className="p-4 rounded bg-[#ff9ea]">
-                <span className="text-yellowColor text-[15px] leading-6 font-semibold">
-                {formateDate("12-04-2019")} - {formateDate("08-13-2023")}
-                </span>
+          <li className="p-4 rounded bg-[#ff9ea]">
+            <span className="text-yellowColor text-[15px] leading-6 font-semibold">
+              {formateDate("12-04-2019")} - {formateDate("08-13-2023")}
+            </span>
 
-                <p className="text-[16px] leading-6 font-medium text-textColor">
-                    Sr. Member of Technical Staff
-                </p>
+            <p className="text-[16px] leading-6 font-medium text-textColor">
+              Sr. Member of Technical Staff
+            </p>
 
-                <p className="text-[14px] leading-5 font-medium text-textColor">
-                    Adobe Bangalore India
-                </p>
-            </li>
+            <p className="text-[14px] leading-5 font-medium text-textColor">
+              Adobe Bangalore India
+            </p>
+          </li>
         </ul>
       </div>
     </div>

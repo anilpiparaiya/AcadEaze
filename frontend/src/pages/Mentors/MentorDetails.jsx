@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import mentorImg from "../../assets/images/hero-img01.jpg";
+
 import starIcon from "../../assets/images/Star.png";
 import MentorAbout from "./MentorAbout";
 import Feedback from "./Feedback";
@@ -71,6 +72,7 @@ const MentorDetails = () => {
             </div>
           </div>
         </div>
+        <SidePanel />
       </div>
     </section>
   );
