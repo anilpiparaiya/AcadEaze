@@ -15,8 +15,7 @@ import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
 import FaqList from "../components/Faq/FaqList";
 import MentorList from "../components/Mentors/MentorList";
-
-// import Testimonial from "../components/Testimonial/Testimonial";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -86,7 +85,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Hero Section end */}
 
       <section>
@@ -185,13 +183,10 @@ const Home = () => {
       </section>
 
       {/* About section start */}
-
       <About />
-
       {/* About section end */}
 
       {/* services section start */}
-
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -205,7 +200,6 @@ const Home = () => {
           <ServiceList />
         </div>
       </section>
-
       {/* services section end */}
 
       {/* feature section start */}
@@ -291,11 +285,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* feature section end */}
 
       {/* our great mentors */}
-
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -309,11 +301,9 @@ const Home = () => {
           <MentorList />
         </div>
       </section>
-
       {/* our great mentors */}
 
       {/* faq section start*/}
-
       <section>
         <div className="flex justify-between gap-[50px] lg:gap-0">
           <div className="w-1/2 hidden md:block">
@@ -327,12 +317,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* faq section end */}
 
       {/* testimonial */}
-
-
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -342,8 +329,7 @@ const Home = () => {
               offers unmatched, expert educare.
             </p>
           </div>
-
-        {/* <Testimonial /> */}
+        <Testimonial />
         </div>
       </section>
 

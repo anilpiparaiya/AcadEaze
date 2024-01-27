@@ -1,7 +1,6 @@
 import MentorCard from "./../../components/Mentors/MentorCard";
 import { mentors } from "./../../assets/data/mentors";
-// import Testimonial from "../../components/Testimonial/Testimonial";
-
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 const Mentors = () => {
   return (
@@ -26,13 +25,26 @@ const Mentors = () => {
       <section>
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {mentors.map((mentor) => <MentorCard key={mentor.id} mentor={mentor} />
-            )}
+            {mentors.map((mentor) => (
+              <MentorCard key={mentor.id} mentor={mentor} />
+            ))}
           </div>
         </div>
       </section>
 
-      
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">What our student say</h2>
+            <p>
+              World-class care for everyone. Our mentor system offers unmatched,
+              expert mentor support
+            </p>
+          </div>
+        </div>
+
+        <Testimonial />
+      </section>
     </>
   );
 };
