@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import starIcon from "../../assets/images/Star.png";
 import { Link } from "react-router-dom";
@@ -10,7 +11,7 @@ const MentorCard = ({ mentor }) => {
     totalRating,
     photo,
     specialization,
-    totalMentees,
+    totalStudents,
     college,
   } = mentor;
   return (
@@ -49,7 +50,7 @@ const MentorCard = ({ mentor }) => {
       <div className="mt-[18px] lg:mt-5 flex items-center justify-between">
         <div>
           <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">
-            +{totalMentees} Mentees
+            +{totalStudents} Students
           </h3>
 
           <p className="text-[14px] leading-6 font-[400] text-text-textColor">

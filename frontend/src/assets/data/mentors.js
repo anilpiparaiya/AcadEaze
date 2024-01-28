@@ -15,7 +15,7 @@ export const mentors = [
     avgRating: 4.8,
     totalRating: 272,
     photo: mentorImg01,
-    totalMentees: 1500,
+    totalStudents: 1500,
     college: "Indian Institute of Technology Kanpur",
   },
   {
@@ -25,7 +25,7 @@ export const mentors = [
     avgRating: 4.8,
     totalRating: 272,
     photo: mentorImg02,
-    totalMentees: 1500,
+    totalStudents: 1500,
     college: "Indian Institute of Technology Kanpur",
   },
   {
@@ -35,7 +35,7 @@ export const mentors = [
     avgRating: 4.8,
     totalRating: 272,
     photo: mentorImg03,
-    totalMentees: 1500,
+    totalStudents: 1500,
     college: "Indian Institute of Technology Kanpur",
   },
 ];
