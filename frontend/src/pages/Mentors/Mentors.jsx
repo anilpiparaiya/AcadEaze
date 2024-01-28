@@ -32,7 +32,6 @@ const Mentors = () => {
         </div>
       </section>
 
-      
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -42,7 +41,7 @@ const Mentors = () => {
               offers unmatched, expert educare.
             </p>
           </div>
-        <Testimonial />
+          <Testimonial />
         </div>
       </section>
     </>

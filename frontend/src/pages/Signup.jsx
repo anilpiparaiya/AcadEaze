@@ -27,7 +27,7 @@ const Signup = () => {
     const data = await uploadImageToCloudinary(file)
 
     // later we will use cloudinary to upload images
-    console.log(data);
+    // console.log(data);
   };
 
   const submitHandler = async (event) => {
@@ -47,7 +47,6 @@ const Signup = () => {
           </div>
 
           {/* sign up form */}
-
           <div className="rounded-l-lg lg:pl-16 py-10">
             <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10">
               Create an <span className="text-primaryColor">account</span>
@@ -108,7 +107,7 @@ const Signup = () => {
                     onChange={handleInputChange}
                     className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
                   >
-                    <option value="mentee">Mentee</option>
+                    <option value="student">Student</option>
                     <option value="mentor">Mentor</option>
                   </select>
                 </label>
@@ -121,7 +120,7 @@ const Signup = () => {
                     onChange={handleInputChange}
                     className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
                   >
-                    <option value="mentee">Select</option>
+                    <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
