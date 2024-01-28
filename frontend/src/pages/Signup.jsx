@@ -1,38 +1,39 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import signupImg from "../assets/images/signup.gif";
 import avatar from "../assets/images/hero-img01.jpg";
 import { Link } from "react-router-dom";
+import uploadImageToCloudinary from "../utils/uploadCloudinary";
 
 const Signup = () => {
-
-
-  const [selectFile, setSelectFile] = useState(null)
-  const [previewURL, setPreviewURL] = useState("")
+  const [selectFile, setSelectFile] = useState(null);
+  const [previewURL, setPreviewURL] = useState("");
 
   const [formData, setFormdata] = useState({
     name: "",
     email: "",
     password: "",
-    photo: "",
+    photo: "selectFile",
     gender: "",
-    role: "mentee"
+    role: "mentee",
   });
 
   const handleInputChange = (e) => {
     setFormdata({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileInputChange = async (event) =>{
-    const file = event.target.files[0]
+  const handleFileInputChange = async (event) => {
+    const file = event.target.files[0];
+
+    const data = await uploadImageToCloudinary(file)
 
     // later we will use cloudinary to upload images
-    console.log(file);
-  }
+    console.log(data);
+  };
 
-  const submitHandler = async event=>{
-    event.preventDefault()
-
-  }
+  const submitHandler = async (event) => {
+    console.log(formData)
+    event.preventDefault();
+  };
 
   return (
     <section className="px-5 xl:px-0">
@@ -105,7 +106,6 @@ const Signup = () => {
                     name="role"
                     value={formData.role}
                     onChange={handleInputChange}
-                    
                     className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
                   >
                     <option value="mentee">Mentee</option>
