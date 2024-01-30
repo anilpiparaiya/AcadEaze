@@ -297,7 +297,6 @@ const Home = () => {
               offers unmatched, expert educare.
             </p>
           </div>
-
           <MentorList />
         </div>
       </section>
