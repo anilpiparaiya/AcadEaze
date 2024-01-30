@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
 // import logo from "../../assets/images/logo.png"
-import logo from "../../assets/images/logo1.png"
+// import logo from "../../assets/images/logo1.png"
 
 import userimg from '../../assets/images/avatar-icon.png'
 import {NavLink, Link} from 'react-router-dom'
@@ -59,7 +59,9 @@ const Header = () => {
       <div className='flex items-center justify-between'>
         {/* logo */}
         <div>
-          <img src="https://www.acadease.com/img/icon/bs-01.png" alt="" />
+          {/* <img src="https://www.acadease.com/img/icon/bs-01.png" alt="" /> */}
+          <img src="https://www.acadease.com/img/icon/fact-01.png" alt="" />
+         
         </div>
 
         {/* menu */}
