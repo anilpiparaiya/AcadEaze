@@ -15,7 +15,7 @@ export const register = async (req, res) => {
   try {
     let user = null;
 
-    if (role === "mentee") {
+    if (role === "student") {
       user = await User.findOne({ email });
     } else if (role === "mentor") {
       user = Mentor.findOne({ email });
@@ -31,7 +31,7 @@ export const register = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt)
 
-    if (role === "mentee") {
+    if (role === "student") {
       user = new User({
         name,
         email,
@@ -68,14 +68,14 @@ export const login = async (req, res) => {
 
     let user = null
 
-    const mentee = await User.findOne({email})
+    const student = await User.findOne({email})
     const mentor = await Mentor.findOne({email})
 
-    if(mentee){
-      user = mentee
+    if(student){
+      user = student
     }
 
-    if(menor){
+    if(mentor){
       user = mentor
     }
 
